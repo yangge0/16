@@ -1,0 +1,1249 @@
+<ThingDefs><List>
+	<!--system下的item名称不能随意更改-->
+
+	<ThingDef Type="Item" Name="Item_HorribleMeal" Parent="SimpleFoodBase">
+	<ThingName>搞砸的饭菜</ThingName>
+	<TexPath>res\Sprs\object\object_BadFood</TexPath>
+	<Desc>一道烹饪失败的料理，味道十分勉强，仅仅可以填肚子。</Desc>
+	<Beauty>1</Beauty>
+	<Tags>
+		<Tag Name="Food" Level="-1"/>
+		<Tag Name="BowlFood" Level="1"/>
+	</Tags>	
+	<MaxStack>100</MaxStack>
+	<Item>
+		<Food>
+			<EatDirectable>1</EatDirectable>
+			<Nutrition>40</Nutrition>
+			<Moods>
+				<li>Eat3</li>
+			</Moods>
+			<Damages>
+				<li PartName="TheWholeBody" Name="AbdominalPain" Rate="0.5"/>
+				<li Rate="0.5"/>
+			</Damages>
+		</Food>
+		<BeMade>
+			<WorkToMake>20</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<Condition>
+					<Skills>
+						<!--<Skill name = "sss" level="1"/>-->
+					</Skills>
+					<Researchs>
+						<!--<Research name = "sss" level="1"/>-->
+					</Researchs>
+			</Condition>
+			<StuffCategories>
+				<Stuff name = "Meat"/>
+				<Stuff name = "Ingredient"/>
+			</StuffCategories>
+			<CostStuffCount>1</CostStuffCount>
+		</BeMade> 
+	</Item>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_DragonShit" Parent="MaterialBase">	
+	<Tags>
+		<Tag Name="_SHIT" Level="1"/>
+	</Tags>
+	<ThingName>天龙砂</ThingName>
+	<TexScale>3</TexScale>
+	<TexPath>res\Sprs\object\object_shi01</TexPath>	
+	<Desc>龙的粪便。</Desc>
+	<MaxStack>1</MaxStack>
+	<Beauty>-20</Beauty>
+	<Rate>5</Rate>
+	<ElementKind>Tu</ElementKind>
+	<Item Lable="Other">
+		<FabaoSuffix>粪,砂,屎</FabaoSuffix>
+		<PhysicalLables>
+			<li>Rough2</li>
+			<li>LowDensity2</li>
+			<li>GreatThing_Ling</li>
+			<li>Shit</li>
+		</PhysicalLables>
+		<BeMade>
+			<WorkToMake>10</WorkToMake>
+			<CostItems>
+				<Item name = "Item_LingCrystal" count = "500"/>
+			</CostItems>
+		</BeMade> 
+		<Food>
+			<EatDirectable>1</EatDirectable>
+			<Nutrition>50</Nutrition>
+			<Moods>
+				<li>Eat12</li>
+			</Moods>
+		</Food>
+		 <Rot>
+			 <RotSpeed>0.001</RotSpeed>
+			 <DaysToRotStart>0</DaysToRotStart>
+			 <DestroyThing></DestroyThing>
+			 <TempMin>0</TempMin>
+			 <LingMax>200</LingMax>
+		 </Rot>
+	</Item>
+	<Ling>
+		<AddionLing>75</AddionLing>
+		<AddionRadius>1</AddionRadius>
+		<AddionFailing>0</AddionFailing>
+		<AddionFailRadius>0</AddionFailRadius>
+		
+		<Attenuation>0.05</Attenuation>
+		<Absorption>0.4</Absorption>
+		<Accommodate>40</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Tu</Kind>
+		<Value>3</Value>         
+		<Radius>3</Radius>
+		<Failing>0.6</Failing>
+		<FailRadius>0</FailRadius>
+	</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_StoneBox2" Parent="MaterialBase">
+		<ThingName>古旧石匣</ThingName>
+		<MaxStack>1</MaxStack>
+		<TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+		<Desc>深埋在山岩中的一方石匣，看上去有些年代了，不知道里面有什么东西。</Desc>	
+		<Beauty>1</Beauty>	
+		<Rate>9</Rate>
+		<ElementKind>None</ElementKind>
+		<Tags>
+			<Tag Name="_StoneBox" Level="1"/>
+		</Tags>
+		<Flammability>
+			<Flammability>0</Flammability>
+		</Flammability>
+		<Item Lable="Other">		
+		<BeMade>
+			<WorkToMake>10</WorkToMake>
+			<CostItems>
+				<Item name = "Item_HolySpar" count = "1"/>
+			</CostItems>
+		</BeMade> 
+			<FabaoSuffix>匣</FabaoSuffix>			
+		</Item>
+		<StoryBnts>
+			<li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_StoneBox2" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+		</StoryBnts>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_LunHui_Box2" Parent="MaterialBase">
+		<ThingName>神符匣</ThingName>
+		<MaxStack>1</MaxStack>
+		<TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+		<Desc>神奇的符匣，其中装有一张绝品符咒。</Desc>	
+		<Beauty>1</Beauty>	
+		<Rate>9</Rate>
+		<ElementKind>None</ElementKind>
+		<Tags>
+			<Tag Name="_StoneBox" Level="1"/>
+		</Tags>
+		<Flammability>
+			<Flammability>0</Flammability>
+		</Flammability>
+		<Item Lable="Other">
+		<BeMade>
+			<WorkToMake>10</WorkToMake>
+			<CostItems>
+				<Item name = "Item_HolySpar" count = "1"/>
+			</CostItems>
+		</BeMade> 	
+			<NotRandom>1</NotRandom>
+			<FabaoSuffix>匣</FabaoSuffix>				
+		</Item>
+		<StoryBnts>
+			<li Name="打开" Desc="打开太一宝匣。" Story="Story_Item_LunHui_Box2" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+		</StoryBnts>
+	</ThingDef>
+
+	<ThingDef Type="Item" Name="Item_DragonScaleGift" Parent="MaterialBase">
+		<ThingName>龙鳞礼盒</ThingName>
+		<MaxStack>1</MaxStack>
+		<TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+		<Desc>用龙鳞换来的小礼包233333。</Desc>	
+		<Beauty>12</Beauty>	
+		<Rate>12</Rate>
+		<ElementKind>None</ElementKind>
+		<Tags>
+			<Tag Name="_StoneBox" Level="1"/>
+		</Tags>
+		<Flammability>
+			<Flammability>0</Flammability>
+		</Flammability>
+		<Item Lable="Other">		
+		<BeMade>
+			<WorkToMake>10</WorkToMake>
+			<CostItems>
+				<Item name = "Item_DragonScale" count = "1"/>
+			</CostItems>
+		</BeMade> 
+			<FabaoSuffix>匣</FabaoSuffix>			
+		</Item>
+		<StoryBnts>
+			<li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_DragonScaleGift" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+		</StoryBnts>
+	</ThingDef>
+
+	<ThingDef Type="Item" Name="Item_TaiYiMen" Parent="MaterialBase">
+		<ThingName>太一门秘匣</ThingName>
+		<MaxStack>1</MaxStack>
+		<TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+		<Desc>里面封存了一些有关于太一门的东西。</Desc>	
+		<Beauty>12</Beauty>	
+		<Rate>12</Rate>
+		<ElementKind>None</ElementKind>
+		<Tags>
+			<Tag Name="_StoneBox" Level="1"/>
+		</Tags>
+		<Flammability>
+			<Flammability>0</Flammability>
+		</Flammability>
+		<Item Lable="Other">		
+		<BeMade>
+			<WorkToMake>10</WorkToMake>
+			<CostItems>
+				<Item name = "Item_Water" count = "1"/>
+			</CostItems>
+		</BeMade> 
+			<FabaoSuffix>匣</FabaoSuffix>			
+		</Item>
+		<StoryBnts>
+			<li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_TaiYiMen" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+		</StoryBnts>
+	</ThingDef>
+	<ThingDef Type="Item" Name="Item_ML" Parent="MaterialBase">
+		<ThingName>木材出售宝箱</ThingName>
+		<MaxStack>1</MaxStack>
+		<TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+		<Desc>这里面有100仙灵币</Desc>	
+		<Beauty>2</Beauty>	
+		<Rate>2</Rate>
+		<ElementKind>None</ElementKind>
+		<Tags>
+			<Tag Name="_StoneBox" Level="1"/>
+		</Tags>
+		<Flammability>
+			<Flammability>0</Flammability>
+		</Flammability>
+		<Item Lable="Other">		
+		<BeMade>
+			<WorkToMake>60</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_RoughWoodBlock" count = "100"/>
+			</CostItems>
+			
+		</BeMade> 
+			<FabaoSuffix>匣</FabaoSuffix>			
+		</Item>
+		<StoryBnts>
+			<li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_100" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+		</StoryBnts>
+	</ThingDef>
+
+  <ThingDef Type="Item" Name="Item_LLL" Parent="MaterialBase">
+    <ThingName>灵木出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有250仙灵币</Desc>
+    <Beauty>6</Beauty>
+    <Rate>6</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>150</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_LingWoodBlock" count = "50"/>
+        </CostItems>
+                
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_250" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+
+  <ThingDef Type="Item" Name="Item_JSML" Parent="MaterialBase">
+    <ThingName>金丝木料出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有1000仙灵币</Desc>
+    <Beauty>10</Beauty>
+    <Rate>10</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>600</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_HardWoodBlock" count = "50"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_1000" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+  <ThingDef Type="Item" Name="Item_WTML" Parent="MaterialBase">
+    <ThingName>梧桐木料出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有500仙灵币</Desc>
+    <Beauty>8</Beauty>
+    <Rate>8</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>300</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_ParasolWoodBlock" count = "10"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_500" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+  <ThingDef Type="Item" Name="Item_ZSZ" Parent="MaterialBase">
+    <ThingName>棕石出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有100仙灵币</Desc>
+    <Beauty>2</Beauty>
+    <Rate>2</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>60</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_BrownRockBlock" count = "100"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_100" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+  <ThingDef Type="Item" Name="Item_HSZ" Parent="MaterialBase">
+    <ThingName>灰石出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有100仙灵币</Desc>
+    <Beauty>2</Beauty>
+    <Rate>2</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>60</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_GrayRockBlock" count = "100"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_100" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+  <ThingDef Type="Item" Name="Item_DLSZ" Parent="MaterialBase">
+    <ThingName>大理石砖出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有200仙灵币</Desc>
+    <Beauty>4</Beauty>
+    <Rate>4</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>120</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_MarbleBlock" count = "100"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_200" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+  <ThingDef Type="Item" Name="Item_YSZ" Parent="MaterialBase">
+    <ThingName>玉石砖出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有500仙灵币</Desc>
+    <Beauty>8</Beauty>
+    <Rate>8</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>300</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_JadeBlock" count = "50"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_500" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+
+  <ThingDef Type="Item" Name="Item_LSZ" Parent="MaterialBase">
+    <ThingName>灵石砖出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有200仙灵币</Desc>
+    <Beauty>4</Beauty>
+    <Rate>4</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>120</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_LingStoneBlock" count = "10"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_200" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+  <ThingDef Type="Item" Name="Item_LJZ" Parent="MaterialBase">
+    <ThingName>灵晶砖出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有200仙灵币</Desc>
+    <Beauty>4</Beauty>
+    <Rate>4</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>120</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_LingCrystalBlock" count = "10"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_200" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+  <ThingDef Type="Item" Name="Item_MFCS" Parent="MaterialBase">
+    <ThingName>面粉出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有100仙灵币</Desc>
+    <Beauty>2</Beauty>
+    <Rate>2</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>60</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_Flour" count = "100"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_100" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+
+  <ThingDef Type="Item" Name="Item_TD" Parent="MaterialBase">
+    <ThingName>铁锭出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有100仙灵币</Desc>
+    <Beauty>2</Beauty>
+    <Rate>2</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>60</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_IronBlock" count = "100"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_200" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+  <ThingDef Type="Item" Name="Item_HTD" Parent="MaterialBase">
+    <ThingName>火铜锭出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有500仙灵币</Desc>
+    <Beauty>8</Beauty>
+    <Rate>8</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>300</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_CopperBlock" count = "50"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_500" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+  <ThingDef Type="Item" Name="Item_HJD" Parent="MaterialBase">
+    <ThingName>寒晶锭出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有500仙灵币</Desc>
+    <Beauty>8</Beauty>
+    <Rate>8</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>300</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_SilverBlock" count = "50"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_500" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+
+  <ThingDef Type="Item" Name="Item_XTD" Parent="MaterialBase">
+    <ThingName>玄铁锭出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有500仙灵币</Desc>
+    <Beauty>8</Beauty>
+    <Rate>8</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>300</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_DarksteelBlock" count = "10"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_500" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+  <ThingDef Type="Item" Name="Item_HJD1" Parent="MaterialBase">
+    <ThingName>火精锭出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有1000仙灵币</Desc>
+    <Beauty>2</Beauty>
+    <Rate>2</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>600</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_CopperBlock1" count = "10"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_1000" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+  <ThingDef Type="Item" Name="Item_HJD2" Parent="MaterialBase">
+    <ThingName>寒精锭出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有1000仙灵币</Desc>
+    <Beauty>10</Beauty>
+    <Rate>10</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>600</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_SilverBlock1" count = "10"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_1000" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+  <ThingDef Type="Item" Name="Item_XYD" Parent="MaterialBase">
+    <ThingName>星陨锭出售宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>这里有2000仙灵币</Desc>
+    <Beauty>12</Beauty>
+    <Rate>12</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>1200</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_StarEssenceBlock" count = "10"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_Item_2000" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+  
+  
+   <ThingDef Type="Item" Name="Item_M_YM" Parent="MaterialBase">
+    <ThingName>原木购买宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>使用100仙灵币激活阵法获得20个原木</Desc>
+    <Beauty>2</Beauty>
+    <Rate>2</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>12</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_Water" count = "1"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_M_YM" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+  
+   <ThingDef Type="Item" Name="Item_M_LM" Parent="MaterialBase">
+    <ThingName>灵木购买宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>使用250仙灵币激活阵法获得10个灵木</Desc>
+    <Beauty>4</Beauty>
+    <Rate>4</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>12</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_Water" count = "1"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_M_LM" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+  <ThingDef Type="Item" Name="Item_M_JSNM" Parent="MaterialBase">
+    <ThingName>金丝灵木购买宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>使用1000仙灵币激活阵法获得10个金丝楠木</Desc>
+    <Beauty>4</Beauty>
+    <Rate>4</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>12</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_Water" count = "1"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_M_JSNM" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+   <ThingDef Type="Item" Name="Item_M_WTSM" Parent="MaterialBase">
+    <ThingName>梧桐神木购买宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>使用1250仙灵币激活阵法获得5个梧桐神木</Desc>
+    <Beauty>8</Beauty>
+    <Rate>8</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>12</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_Water" count = "1"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_M_WTSM" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+<ThingDef Type="Item" Name="Item_M_ZS" Parent="MaterialBase">
+    <ThingName>棕石购买宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>使用80仙灵币激活阵法获得20个棕石</Desc>
+    <Beauty>2</Beauty>
+    <Rate>2</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>12</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_Water" count = "1"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_M_ZS" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+<ThingDef Type="Item" Name="Item_M_HS" Parent="MaterialBase">
+    <ThingName>灰石购买宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>使用80仙灵币激活阵法获得20个灰石</Desc>
+    <Beauty>2</Beauty>
+    <Rate>2</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>12</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_Water" count = "1"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_M_HS" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+<ThingDef Type="Item" Name="Item_M_DLS" Parent="MaterialBase">
+    <ThingName>大理石购买宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>使用160仙灵币激活阵法获得20个大理石</Desc>
+    <Beauty>2</Beauty>
+    <Rate>2</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>12</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_Water" count = "1"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_M_DLS" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+<ThingDef Type="Item" Name="Item_M_YS" Parent="MaterialBase">
+    <ThingName>玉石购买宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>使用400仙灵币激活阵法获得10个玉石</Desc>
+    <Beauty>4</Beauty>
+    <Rate>4</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>12</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_Water" count = "1"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_M_YS" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+
+<ThingDef Type="Item" Name="Item_M_TZS" Parent="MaterialBase">
+    <ThingName>天柱石购买宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>使用1000仙灵币激活阵法获得5个天柱石</Desc>
+    <Beauty>8</Beauty>
+    <Rate>8</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>12</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_Water" count = "1"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_M_TZS" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+<ThingDef Type="Item" Name="Item_M_TKS" Parent="MaterialBase">
+    <ThingName>铁矿石购买宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>使用160仙灵币激活阵法获得20个铁矿石</Desc>
+    <Beauty>2</Beauty>
+    <Rate>2</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>12</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_Water" count = "1"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_M_TKS" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+<ThingDef Type="Item" Name="Item_M_HTKS" Parent="MaterialBase">
+    <ThingName>火铜矿石购买宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>使用400仙灵币激活阵法获得10个火铜矿石</Desc>
+    <Beauty>4</Beauty>
+    <Rate>4</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>12</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_Water" count = "1"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_M_HTKS" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+<ThingDef Type="Item" Name="Item_M_HJKS" Parent="MaterialBase">
+    <ThingName>寒晶矿石购买宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>使用400仙灵币激活阵法获得10个寒晶矿石</Desc>
+    <Beauty>4</Beauty>
+    <Rate>4</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>12</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_Water" count = "1"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_M_HJKS" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+<ThingDef Type="Item" Name="Item_M_XTKS" Parent="MaterialBase">
+    <ThingName>玄铁矿石购买宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>使用1000仙灵币激活阵法获得5个玄铁矿石</Desc>
+    <Beauty>8</Beauty>
+    <Rate>8</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>12</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_Water" count = "1"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_M_XTKS" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+
+<ThingDef Type="Item" Name="Item_M_XM" Parent="MaterialBase">
+    <ThingName>小麦购买宝箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>使用80仙灵币激活阵法获得20个小麦</Desc>
+    <Beauty>2</Beauty>
+    <Rate>2</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>12</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_Water" count = "1"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_M_XM" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+<ThingDef Type="Item" Name="Item_M_BXX" Parent="MaterialBase">
+    <ThingName>保险箱</ThingName>
+    <MaxStack>1</MaxStack>
+    <TexPath>res\Sprs\object\object_shixiazi01</TexPath>
+    <Desc>用于查看剩余仙灵币（功能性，有一个就可以）</Desc>
+    <Beauty>12</Beauty>
+    <Rate>12</Rate>
+    <ElementKind>None</ElementKind>
+    <Tags>
+      <Tag Name="_StoneBox" Level="1"/>
+    </Tags>
+    <Flammability>
+      <Flammability>0</Flammability>
+    </Flammability>
+    <Item Lable="Other">
+      <BeMade>
+        <WorkToMake>12</WorkToMake>
+        <Quality>0</Quality>
+        <ArtDesc></ArtDesc>
+        <CostItems>
+          <Item name = "Item_Water" count = "1"/>
+        </CostItems>
+
+      </BeMade>
+      <FabaoSuffix>匣</FabaoSuffix>
+    </Item>
+    <StoryBnts>
+      <li Name="打开" Desc="试着打开这个匣子" Story="Story_M_BXX" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+    </StoryBnts>
+  </ThingDef>
+
+
+
+
+
+
+</List></ThingDefs>

@@ -1,0 +1,338 @@
+<Stories><List>	
+<!--系统使用，不能修改-->
+	
+	<Story Name="Story_Item_100" Parent="BaseFillingStory">
+		<DisplayName>钞票宝箱</DisplayName>
+		<Desc>[NAME]发现此物精致异常，上面写着大大的100。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>打开</Display>
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+        GameMain:GetMod("WBG"):add(100);
+        
+		
+				]]>		
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+  <Story Name="Story_Item_200" Parent="BaseFillingStory">
+    <DisplayName>钞票宝箱</DisplayName>
+    <Desc>[NAME]发现上面写着200，想必很是珍贵。</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):add(200);
+        
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+  <Story Name="Story_Item_250" Parent="BaseFillingStory">
+    <DisplayName>钞票宝箱</DisplayName>
+    <Desc>[NAME]发现上面写着250，好奇的想为什么要是250呢。</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):add(250);
+        
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+
+  <Story Name="Story_Item_500" Parent="BaseFillingStory">
+    <DisplayName>钞票宝箱</DisplayName>
+    <Desc>[NAME]发现上面铭刻着500，此物紫气冲天，必不是凡物。</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):add(500);
+        
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+  
+  <Story Name="Story_Item_1000" Parent="BaseFillingStory">
+    <DisplayName>钞票宝箱</DisplayName>
+    <Desc>[NAME]刚一靠近，就被此物的精致程度震惊了，上面的1000如龙飞凤舞，此物周边宛若仙境。</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):add(1000);
+       
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+
+  <Story Name="Story_Item_2000" Parent="BaseFillingStory">
+    <DisplayName>钞票宝箱</DisplayName>
+    <Desc>[NAME]看到上面镌刻着2000，好似活物一般，整个门派宝气冲天，[NAME]赶紧布下阵法防止宝器外泄。</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):add(2000);
+        
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+  
+  <Story Name="Story_M_YM" Parent="BaseFillingStory">
+    <DisplayName>原木购买宝箱</DisplayName>
+    <Desc>[NAME]使用100仙灵币激活阵法</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):MaiWp(100,"Item_Wood",20);
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+  <Story Name="Story_M_LM" Parent="BaseFillingStory">
+    <DisplayName>灵木购买宝箱</DisplayName>
+    <Desc>[NAME]使用250仙灵币激活阵法</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):MaiWp(250,"Item_LingWood",10);
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+  
+  <Story Name="Story_M_JSNM" Parent="BaseFillingStory">
+    <DisplayName>金丝灵木购买宝箱</DisplayName>
+    <Desc>[NAME]使用1000仙灵币激活阵法</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):MaiWp(1000,"Item_HardWood",10);
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+   <Story Name="Story_M_WTSM" Parent="BaseFillingStory">
+    <DisplayName>梧桐神木购买宝箱</DisplayName>
+    <Desc>[NAME]使用1250仙灵币激活阵法</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):MaiWp(1250,"Item_ParasolWood",5);
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+  <Story Name="Story_M_ZS" Parent="BaseFillingStory">
+    <DisplayName>棕石购买宝箱</DisplayName>
+    <Desc>[NAME]使用80仙灵币激活阵法</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):MaiWp(80,"Item_BrownRock",20);
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+  <Story Name="Story_M_HS" Parent="BaseFillingStory">
+    <DisplayName>棕石购买宝箱</DisplayName>
+    <Desc>[NAME]使用80仙灵币激活阵法</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):MaiWp(80,"Item_GrayRock",20);
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+  <Story Name="Story_M_DLS" Parent="BaseFillingStory">
+    <DisplayName>大理石购买宝箱</DisplayName>
+    <Desc>[NAME]使用160仙灵币激活阵法</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):MaiWp(160,"Item_Marble",20);
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+   <Story Name="Story_M_YS" Parent="BaseFillingStory">
+    <DisplayName>玉石购买宝箱</DisplayName>
+    <Desc>[NAME]使用400仙灵币激活阵法</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):MaiWp(400,"Item_Jade",10);
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+     <Story Name="Story_M_TZS" Parent="BaseFillingStory">
+    <DisplayName>天柱石购买宝箱</DisplayName>
+    <Desc>[NAME]使用1000仙灵币激活阵法</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):MaiWp(1000,"Item_SkyStone",5);
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+     <Story Name="Story_M_TKS" Parent="BaseFillingStory">
+    <DisplayName>铁矿石购买宝箱</DisplayName>
+    <Desc>[NAME]使用160仙灵币激活阵法</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):MaiWp(160,"Item_IronRock",20);
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+     <Story Name="Story_M_HTKS" Parent="BaseFillingStory">
+    <DisplayName>火铜矿石购买宝箱</DisplayName>
+    <Desc>[NAME]使用400仙灵币激活阵法</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):MaiWp(400,"Item_CopperRock",10);
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+      <Story Name="Story_M_HJKS" Parent="BaseFillingStory">
+    <DisplayName>寒晶矿石购买宝箱</DisplayName>
+    <Desc>[NAME]使用400仙灵币激活阵法</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):MaiWp(400,"Item_SilverRock",10);
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+    <Story Name="Story_M_XTKS" Parent="BaseFillingStory">
+    <DisplayName>玄铁矿石购买宝箱</DisplayName>
+    <Desc>[NAME]使用1000仙灵币激活阵法</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):MaiWp(1000,"Item_DarksteelRock",5);
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+  <Story Name="Story_M_XM" Parent="BaseFillingStory">
+    <DisplayName>小麦购买宝箱</DisplayName>
+    <Desc>[NAME]使用80仙灵币激活阵法</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	story:RemoveBindItem();
+        GameMain:GetMod("WBG"):MaiWp(80,"Item_Wheat",20);
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+
+<Story Name="Story_M_BXX" Parent="BaseFillingStory">
+    <DisplayName>保险箱</DisplayName>
+    <Desc>[NAME]看了看保险箱上面的余额</Desc>
+    <Kind>None</Kind>
+    <Selections>
+      <li>
+        <Display>打开</Display>
+        <OKResult>
+          <![CDATA[	
+        GameMain:GetMod("WBG"):ObServer();
+				]]>
+        </OKResult>
+      </li>
+    </Selections>
+  </Story>
+
+
+
+
+
+</List></Stories>

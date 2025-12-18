@@ -1,0 +1,432 @@
+<ThingDefs><List>
+	<ThingDef Type="Building" Name="ProductionBase" Parent="BuildingBase">
+		<TexPath></TexPath>
+		<ThingName></ThingName>
+		<Desc>ProductionBase</Desc>
+		
+		<BlockLight>1</BlockLight>
+		<Beauty>2</Beauty>
+		<UseHitPoints>1</UseHitPoints>
+		<MaxHitPoints>500</MaxHitPoints>
+		<VisionRadius>10</VisionRadius>
+		
+		<ShadowSize>
+			<x>1</x>
+			<y>0.8</y>
+		</ShadowSize>
+		<Building>
+			<RoomKind>WorkRoom</RoomKind>
+			<BePackage>0</BePackage>
+			<ShowFree>1</ShowFree>
+			<SelectProduceStuff>1</SelectProduceStuff>
+			<WorkAnimation>assemble</WorkAnimation>
+			<!--
+			<Drive>
+				<StuffCategories>
+					<Stuff name = "Wood"/>
+					<Stuff name = "Plant"/>
+				</StuffCategories>
+				<CostStuffCount>10</CostStuffCount>
+				<Duration>0.05</Duration>
+				<DriveJustProdece>0</DriveJustProdece>
+				<RateMin>0</RateMin>
+				<RateMax>1</RateMax>
+			</Drive>
+			
+			<BeMade>
+				<WorkToMake>50</WorkToMake>
+				<Quality>0</Quality>
+				<ArtDesc></ArtDesc>
+				<Condition>
+						<Skills>
+							<Skill name = "sss" level="1"/>
+						</Skills>
+						<Researchs>
+							<Research name = "sss" level="1"/>
+						</Researchs>
+				</Condition>
+				<StuffCategories>
+					<Stuff name = "Metal"/>
+					<Stuff name = "Wood"/>
+					<Stuff name = "RockBlock"/>
+				</StuffCategories>
+				<CostStuffCount>1</CostStuffCount>
+				<CostItems>
+					<Item name = "wheat" count = "1"/>
+				</CostItems>
+			</BeMade>
+			<Produces>
+				<Produce>
+					<ThingDef>Item_HomeFood</ThingDef>
+					<Display>家常的食物</Display>
+					<Count>1</Count>
+				</Produce>
+			</Produces>
+			-->
+		</Building>
+		<!--
+		<Heat>
+			<Value>0</Value>
+			<Radius>0</Radius>
+			<Failing>0</Failing>
+			<FailRadius>0</FailRadius>
+		</Heat>
+		
+		<Light>
+			<Value>0</Value>
+			<Radius>0</Radius>
+			<Failing>0</Failing>
+			<FailRadius>0</FailRadius>
+		</Light>
+		-->
+<!--	<Element>
+		<Kind>None</Kind>
+		<Value>3</Value>         
+		<Radius>2</Radius>
+		<Failing>1</Failing>
+		<FailRadius>0</FailRadius>
+	</Element>-->
+	<Ling>
+		<AddionLing>0</AddionLing>
+		<AddionRadius>1</AddionRadius>
+		<AddionFailing>0</AddionFailing>
+		<AddionFailRadius>0</AddionFailRadius>
+		
+		<Attenuation>0</Attenuation>
+		<Absorption>0</Absorption>
+		<Accommodate>0</Accommodate>
+	</Ling>
+	</ThingDef>
+  <ThingDef Type="Building" Name="WB_Place"  Parent="ProductionBase">	
+	<ThingName>万宝阁（卖）</ThingName>
+	<Desc>万宝阁凡间代理，出售各种物资能获取仙灵币。</Desc>
+	<TexPath>Spr\Building\didian01.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<SelectAble>1</SelectAble>	
+	<CastShadow>0</CastShadow>
+	<Beauty>5</Beauty>
+	<BlockLight>0</BlockLight>
+	<ElementKind>None</ElementKind>
+	<ColliderKind>ThrowOver</ColliderKind>
+	<Flammability>
+		<Flammability>-1</Flammability>
+	</Flammability>
+	<Collider>
+		<!--(0Empty 1Base)+(2EmptyCenter 4EmptyWorkspace)-->
+		<Data>
+		[0,4,0],
+		[4,3,4],
+		[0,4,0],
+		</Data>
+		<WorkOffset>
+			<li Index="0"  X="-0.05" Y="-0.16" Ang="180"/>
+			<li Index="1"  X="0.2" Y="0" Ang="90"/>
+			<li Index="2"  X="-0.2" Y="0" Ang="-90"/>
+			<li Index="3"  X="0" Y="0.45" Ang="1"/>
+		</WorkOffset>
+	</Collider>
+
+	<Heat>
+		<Value>10</Value>
+		<Radius>5</Radius>
+		<RoomValue>120</RoomValue>
+		<Failing>0.4</Failing>
+		<FailRadius>0</FailRadius>
+	</Heat>
+	<Light>
+		<Value>110</Value>
+		<Failing>0.5</Failing>
+		<FailRadius>3</FailRadius>
+		<Radius>10</Radius>
+		<Color>FFDEBCFF</Color>
+	</Light>
+	<Building>
+			<ShowFree>0</ShowFree>
+		<NoFengshui>1</NoFengshui>
+		<NoFight>1</NoFight>
+		<TerrainAffordanceNeeded>Ground</TerrainAffordanceNeeded>
+		<CanMakeRoom>0</CanMakeRoom>
+		<WorkAnimation>produce</WorkAnimation>
+		<BeMade>
+			<WorkToMake>1</WorkToMake>
+			<Quality>0</Quality>
+		</BeMade>
+		<ProduceKind>Handwork</ProduceKind>
+		<Produces>
+			<Produce>
+				<ThingDef>Item_ML</ThingDef>
+				<Display>木材出售宝箱</Display>
+				<Count>1</Count>
+			</Produce>
+      <Produce>
+        <ThingDef>Item_LLL</ThingDef>
+        <Display>灵木出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+
+      <Produce>
+        <ThingDef>Item_JSML</ThingDef>
+        <Display>金丝木料出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+
+      <Produce>
+        <ThingDef>Item_WTML</ThingDef>
+        <Display>梧桐木料出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+
+      <Produce>
+        <ThingDef>Item_ZSZ</ThingDef>
+        <Display>棕石出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+
+      <Produce>
+        <ThingDef>Item_HSZ</ThingDef>
+        <Display>灰石出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+
+      <Produce>
+        <ThingDef>Item_DLSZ</ThingDef>
+        <Display>大理石砖出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+
+      <Produce>
+        <ThingDef>Item_YSZ</ThingDef>
+        <Display>玉石砖出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+
+      <Produce>
+        <ThingDef>Item_LSZ</ThingDef>
+        <Display>灵石砖出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+
+      <Produce>
+        <ThingDef>Item_LJZ</ThingDef>
+        <Display>灵晶砖出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+
+      <Produce>
+        <ThingDef>Item_MFCS</ThingDef>
+        <Display>面粉出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+
+      <Produce>
+        <ThingDef>Item_TD</ThingDef>
+        <Display>铁锭出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+
+      <Produce>
+        <ThingDef>Item_HTD</ThingDef>
+        <Display>火铜锭出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+
+      <Produce>
+        <ThingDef>Item_HJD</ThingDef>
+        <Display>寒晶锭出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+
+      <Produce>
+        <ThingDef>Item_XTD</ThingDef>
+        <Display>玄铁锭出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+
+      <Produce>
+        <ThingDef>Item_HJD1</ThingDef>
+        <Display>火精锭出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+
+      <Produce>
+        <ThingDef>Item_HJD2</ThingDef>
+        <Display>寒精锭出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+
+      <Produce>
+        <ThingDef>Item_XYD</ThingDef>
+        <Display>星陨锭出售宝箱</Display>
+        <Count>1</Count>
+      </Produce>
+      
+    </Produces>
+    
+    
+    
+    
+    
+    
+    
+    
+	</Building>
+	</ThingDef>
+   <ThingDef Type="Building" Name="WB_Place1"  Parent="ProductionBase">	
+	<ThingName>万宝阁（买）</ThingName>
+	<Desc>万宝阁凡间代理，出售各种物资能获取仙灵币。</Desc>
+	<TexPath>Spr\Building\didian01.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<SelectAble>1</SelectAble>	
+	<CastShadow>0</CastShadow>
+	<Beauty>5</Beauty>
+	<BlockLight>0</BlockLight>
+	<ElementKind>None</ElementKind>
+	<ColliderKind>ThrowOver</ColliderKind>
+	<Flammability>
+		<Flammability>-1</Flammability>
+	</Flammability>
+	<Collider>
+		<!--(0Empty 1Base)+(2EmptyCenter 4EmptyWorkspace)-->
+		<Data>
+		[0,4,0],
+		[4,3,4],
+		[0,4,0],
+		</Data>
+		<WorkOffset>
+			<li Index="0"  X="-0.05" Y="-0.16" Ang="180"/>
+			<li Index="1"  X="0.2" Y="0" Ang="90"/>
+			<li Index="2"  X="-0.2" Y="0" Ang="-90"/>
+			<li Index="3"  X="0" Y="0.45" Ang="1"/>
+		</WorkOffset>
+	</Collider>
+
+	<Heat>
+		<Value>10</Value>
+		<Radius>5</Radius>
+		<RoomValue>120</RoomValue>
+		<Failing>0.4</Failing>
+		<FailRadius>0</FailRadius>
+	</Heat>
+	<Light>
+		<Value>110</Value>
+		<Failing>0.5</Failing>
+		<FailRadius>3</FailRadius>
+		<Radius>10</Radius>
+		<Color>FFDEBCFF</Color>
+	</Light>
+	<Building>
+			<ShowFree>0</ShowFree>
+		<NoFengshui>1</NoFengshui>
+		<NoFight>1</NoFight>
+		<TerrainAffordanceNeeded>Ground</TerrainAffordanceNeeded>
+		<CanMakeRoom>0</CanMakeRoom>
+		<WorkAnimation>produce</WorkAnimation>
+		<BeMade>
+			<WorkToMake>1</WorkToMake>
+			<Quality>0</Quality>
+		</BeMade>
+		<ProduceKind>Handwork</ProduceKind>
+		<Produces>
+			
+		 <Produce>
+			<ThingDef>Item_M_BXX</ThingDef>
+			<Display>保险箱</Display>
+			<Count>1</Count>
+		  </Produce>
+		  
+		<Produce>
+			<ThingDef>Item_M_XM</ThingDef>
+			<Display>小麦购买宝箱</Display>
+			<Count>1</Count>
+		  </Produce>
+		  
+		  
+		  <Produce>
+			<ThingDef>Item_M_XTKS</ThingDef>
+			<Display>玄铁矿石购买宝箱</Display>
+			<Count>1</Count>
+		  </Produce>
+		   <Produce>
+			<ThingDef>Item_M_HJKS</ThingDef>
+			<Display>寒晶矿石购买宝箱</Display>
+			<Count>1</Count>
+		  </Produce>
+		   <Produce>
+			<ThingDef>Item_M_HTKS</ThingDef>
+			<Display>火铜矿石购买宝箱</Display>
+			<Count>1</Count>
+		  </Produce>
+		   <Produce>
+			<ThingDef>Item_M_TKS</ThingDef>
+			<Display>铁矿石购买宝箱</Display>
+			<Count>1</Count>
+		  </Produce>
+		   <Produce>
+			<ThingDef>Item_M_TZS</ThingDef>
+			<Display>天柱石购买宝箱</Display>
+			<Count>1</Count>
+		  </Produce>
+		   <Produce>
+			<ThingDef>Item_M_YS</ThingDef>
+			<Display>玉石购买宝箱</Display>
+			<Count>1</Count>
+		  </Produce>
+		   <Produce>
+			<ThingDef>Item_M_DLS</ThingDef>
+			<Display>大理石购买宝箱</Display>
+			<Count>1</Count>
+		  </Produce>
+		    <Produce>
+			<ThingDef>Item_M_HS</ThingDef>
+			<Display>灰石购买宝箱</Display>
+			<Count>1</Count>
+		  </Produce>
+		   
+		    <Produce>
+			<ThingDef>Item_M_ZS</ThingDef>
+			<Display>棕石购买宝箱</Display>
+			<Count>1</Count>
+		  </Produce>
+		   <Produce>
+			<ThingDef>Item_M_WTSM</ThingDef>
+			<Display>梧桐神木购买宝箱</Display>
+			<Count>1</Count>
+		  </Produce>
+		   <Produce>
+			<ThingDef>Item_M_JSNM</ThingDef>
+			<Display>金丝楠木购买宝箱</Display>
+			<Count>1</Count>
+		  </Produce>
+		  <Produce>
+			<ThingDef>Item_M_LM</ThingDef>
+			<Display>灵木购买宝箱</Display>
+			<Count>1</Count>
+		  </Produce>
+		   <Produce>
+			<ThingDef>Item_M_YM</ThingDef>
+			<Display>原木购买宝箱</Display>
+			<Count>1</Count>
+		  </Produce>
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+    </Produces>
+    
+    
+    
+    
+    
+    
+    
+    
+	</Building>
+	</ThingDef>
+	
+  
+</List></ThingDefs>
